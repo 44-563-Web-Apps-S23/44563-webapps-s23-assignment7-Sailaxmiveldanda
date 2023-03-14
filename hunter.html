@@ -4,7 +4,6 @@
   <title>Mouse Finding</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
   integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
@@ -24,7 +23,6 @@
 </style>
 </head>
 <body>
-   
 <div class="container-flex">
   <h1>Find the mouse by Sailaxmi Veldanda</h1>
 </div>
@@ -32,49 +30,116 @@
     <div class="p-2 bg-secondary text-white">Click on the bushes to search for the mouse, beware the cat</div>
     <div id="bushes" class="p-2 bg-info text-white">Number of bushes checked is zero</div>
     <div id="penalty" class="p-2 bg-secondary text-white">Penalty is Zero</div>
-    <div class="p-2 bg-info text-white">Click for help</div>
+    <div class="p-2 bg-info text-white" onclick="help()">Click for help</div>
     <div id="help" class="p-2 bg-secondary text-white">Help report</div>
 </div>
 <br>
 <div class="container">
     <div class="row">
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "zero" onclick="check(0)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "one" onclick="check(1)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "two" onclick="check(2)"  src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "three" onclick="check(3)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "four" onclick="check(4)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "five" onclick="check(5)" src="Images/bush.jpg"></div>
     </div>
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "six" onclick="check(6)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "seven" onclick="check(7)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "eight" onclick="check(8)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "nine" onclick="check(9)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "ten" onclick="check(10)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "eleven" onclick="check(11)" src="Images/bush.jpg"></div>
     </div>
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "twelve" onclick="check(12)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "thirteen" onclick="check(13)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "fourteen" onclick="check(14)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "fifteen" onclick="check(15)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "sixteen" onclick="check(16)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "seventeen" onclick="check(17)" src="Images/bush.jpg"></div>
     </div>
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
-        <div class="col-sm-2"><img src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "eighteen" onclick="check(18)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "nineteen" onclick="check(19)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "twenty" onclick="check(20)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "twentyone" onclick="check(21)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "twentytwo" onclick="check(22)" src="Images/bush.jpg"></div>
+        <div class="col-sm-2"><img id = "twentythree" onclick="check(23)" src="Images/bush.jpg"></div>
     </div>
 </div>
+<script>
+    var ids = ["zero","one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "twentyone", "twentytwo", "twentythree"]
+    var checkCount = 0
+    var penalty = 0
+    var lastCheck = 0
+    var mouseLocation = 13
+    var catLocation = 21
+    var gameOver = false
+    function check(position){
+        if(gameOver){
+            return
+        }
+        else{
+            let id = ids[position]
+            if(position == mouseLocation){
+                document.getElementById(id).src = "Images/mouse.jpg"
+            }
+            else if(position == catLocation){
+                document.getElementById(id).src = "Images/tiger.jpg";
+            }
+            else{
+                document.getElementById(id).src = "Images/grass.jpg"
+            }
+            checkCount++;
+            penalty++;
+            document.getElementById("bushes").innerHTML = "Number of bushes checked is " + checkCount + "."
+            if(position == mouseLocation){
+                gameOver = true
+                penalty -=3
+            }
+            if(position == catLocation){
+                gameOver = true
+                penalty +=4
+            }
+            document.getElementById("penalty").innerHTML = "Penalty is " + penalty + "."
+            lastCheck = position
+        }
+    }
+    function help(){
+        let mouseRow = Math.floor(mouseLocation/6)
+        let mouseColumn = mouseLocation%6
+
+        let catRow = Math.floor(catLocation/6)
+        let catColumn = catLocation%6
+
+        let lastRow = Math.floor(lastCheck/6)
+        let lastColumn = lastCheck%6
+
+        let checkRow1 = mouseRow - lastRow
+        let checkColumn1 = mouseColumn - lastColumn
+        
+        let checkRow2 = catRow - lastRow
+        let checkColumn2 = catColumn -lastColumn
+
+        if((checkRow1 == 1 || checkRow1 == 0 || checkRow1 == -1) && (checkColumn1 == 1 || checkColumn1 == 0 || checkColumn1 == -1)){
+            document.getElementById("help").innerHTML = "meow"
+        }
+        else if((checkRow2 == 1 || checkRow2 == 0) && (checkColumn2 == 0 || checkColumn2 == -1)){
+            document.getElementById("help").innerHTML = "squeek"
+        }
+        else{
+            document.getElementById("help").innerHTML = " Sorry, no help available"
+        }
+        penalty +=2
+        document.getElementById("penalty").innerHTML = "Penalty is " + penalty + "."
+    }
+</script>
 </body>
 </html>
