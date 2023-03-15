@@ -32,7 +32,7 @@
     <div id="penalty" class="p-2 bg-secondary text-white">Penalty is Zero</div>
     <div class="p-2 bg-info text-white" onclick="help()">Click for help</div>
     <div id="help" class="p-2 bg-secondary text-white">Help report</div>
-    <input class="btn btn-primary" type="button" onclick="reset()" value="Reset">
+    <input class="btn btn-primary" type="button" onclick="reset()" value="New Game">
 </div>
 <br>
 <div class="container">
@@ -150,7 +150,7 @@
         gameOver = false
         document.getElementById("bushes").innerHTML = "Number of bushes checked is zero."
         document.getElementById("penalty").innerHTML = "Penalty is zero"
-        check(Math.floor(Math.random()*24))
+        //check(Math.floor(Math.random()*24))
 
     }
 </script>
