@@ -46,8 +46,7 @@
 		<button class="btn"  onclick="makeNewDiv()">Add value</button>
         <input class="btn" type="button" value="Get" onclick="get()">
         <input class="btn" type="button" value="Delay" onclick="delay()">
-        
-	
+        <input class="btn" type="button" value="promote" onclick="promote()">
 </body>
 <script>
 	function makeNewDiv(){
@@ -84,6 +83,17 @@
             let container_div = document.getElementById("target")
             container_div.insertBefore(remove_item,container_div.firstChild)
         }
+    }
+    function promote(){
+        let queueitems = document.getElementsByClassName("delayQ")
+        let length_ele = queueitems.length
+        console.log(length_ele)
+        let number = Math.floor(Math.random()*length_ele)
+        console.log(number)
+        let remove_item = queueitems[number]
+        queueitems[number].remove()
+        let container = document.getElementById('target')
+        container.insertBefore(remove_item,container.firstChild)
     }
 </script>
 </html>	

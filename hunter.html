@@ -32,6 +32,7 @@
     <div id="penalty" class="p-2 bg-secondary text-white">Penalty is Zero</div>
     <div class="p-2 bg-info text-white" onclick="help()">Click for help</div>
     <div id="help" class="p-2 bg-secondary text-white">Help report</div>
+    <input class="btn btn-primary" type="button" onclick="reset()" value="Reset">
 </div>
 <br>
 <div class="container">
@@ -79,8 +80,8 @@
     var checkCount = 0
     var penalty = 0
     var lastCheck = 0
-    var mouseLocation = 13
-    var catLocation = 21
+    var mouseLocation = Math.floor(Math.random()*24)
+    var catLocation = Math.floor(Math.random()*24)
     var gameOver = false
     function check(position){
         if(gameOver){
@@ -129,16 +130,28 @@
         let checkColumn2 = catColumn -lastColumn
 
         if((checkRow1 == 1 || checkRow1 == 0 || checkRow1 == -1) && (checkColumn1 == 1 || checkColumn1 == 0 || checkColumn1 == -1)){
-            document.getElementById("help").innerHTML = "meow"
-        }
-        else if((checkRow2 == 1 || checkRow2 == 0) && (checkColumn2 == 0 || checkColumn2 == -1)){
             document.getElementById("help").innerHTML = "squeek"
+        }
+        else if((checkRow2 == 1 || checkRow2 == 0 ||checkRow2 == -1) && (checkColumn2 == 0 || checkColumn2 == -1 || checkColumn2 == 1)){
+            document.getElementById("help").innerHTML = "meow"
         }
         else{
             document.getElementById("help").innerHTML = " Sorry, no help available"
         }
         penalty +=2
         document.getElementById("penalty").innerHTML = "Penalty is " + penalty + "."
+    }
+    function reset(){
+        for(let i=0;i<ids.length;i++){
+            document.getElementById(ids[1].src = "Images/bush.jpg")
+        }
+        checkCount = 0
+        penalty = 0
+        gameOver = false
+        document.getElementById("bushes").innerHTML = "Number of bushes checked is zero."
+        document.getElementById("penalty").innerHTML = "Penalty is zero"
+        check(Math.floor(Math.random()*24))
+
     }
 </script>
 </body>
